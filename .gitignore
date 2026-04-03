@@ -1,0 +1,5 @@
+# Ignorando arquivos e pastas desnecessários
+__pycache__/
+venv/
+env/
+.env

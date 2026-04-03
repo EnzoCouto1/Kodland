@@ -1,0 +1,2 @@
+# Adicionando framework Flask
+Flask==3.0.3
