@@ -28,6 +28,7 @@ Certifique-se de ter o Python instalado. É recomendado o uso de um ambiente vir
 ```bash
 git clone [https://github.com/EnzoCouto1/Kodland.git](https://github.com/EnzoCouto1/Kodland.git)
 cd Kodland
+´´´
 
 **2. Instale as dependências:**
 ```bash
