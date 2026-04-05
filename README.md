@@ -59,10 +59,12 @@ A aplicação estará rodando localmente no endereço: http://127.0.0.1:5000
 
 ## Como testar?
 
-Para testar o funcionamento da aplicação (recomenda-se o uso do Thunder Client ou Postman).
+1. Para testar o funcionamento da aplicação (recomenda-se o uso do Thunder Client ou Postman).
 
 1 - Para utilizar o Thunder Client basta fazer a instalação de uma extensão no (VSCode)
+
 2 - Assim que instalar, vai aparecer um ícone de um raio ⚡ na sua barra lateral. Clique nele.
+
 3 - Clique no botão New Request.
 
 Com a tela do Thunder Client aberta, siga estes passos para testar o encurtamento:
@@ -75,17 +77,36 @@ Logo abaixo, clique na aba Body e depois selecione a opção JSON.
 
 Na área de texto que vai aparecer, cole o link a ser encurtado no formato JSON, Ex:
 
+```bash
 {
   "url": "https://www.kodland.org/pt/courses/coding/programming-on-python-pro"
 }
+```
 
 Clique no botão azul Send.
 
 Na tela da direita, você verá a sua API respondendo imediatamente com a mensagem de sucesso e o seu link curtinho da seguinte maneira:
 
+```bash
 {
   "codigo": "3NZ01",
   "link_curto": "[http://127.0.0.1:5000/3NZ01](http://127.0.0.1:5000/3NZ01)",
   "mensagem": "Link encurtado com sucesso!"
 }
+```
 
+2. Analytics (Ver status do link)
+Rota: /status/<codigo_gerado>
+
+Método: GET
+
+Resposta de Sucesso (200 OK):
+
+Resposta esperada:
+
+```bash
+{
+  "total_de_cliques": 1,
+  "url_original": "[https://www.google.com](https://www.google.com)"
+}
+```
