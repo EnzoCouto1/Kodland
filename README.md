@@ -26,10 +26,66 @@ Certifique-se de ter o Python instalado. É recomendado o uso de um ambiente vir
 
 **1. Clone o repositório:**
 ```bash
-git clone [https://github.com/EnzoCouto1/Kodland.git](https://github.com/EnzoCouto1/Kodland.git)
-cd Kodland
-´´´
+git clone https://github.com/EnzoCouto1/Kodland
+```
 
-**2. Instale as dependências:**
+**2. Navegue até a pasta do projeto**
+
+```bash
+cd Kodland
+```
+
+**3. Crie um ambiente virtual (Opcional, mas recomendado):**
+```bash
+python -m venv venv
+```
+
+
+**4. Instale as dependências:**
+
 ```bash
 pip install -r requirements.txt
+```
+
+**5. Inicie o servidor Flask:**
+
+```bash
+python app.py
+```
+
+
+A aplicação estará rodando localmente no endereço: http://127.0.0.1:5000
+
+
+## Como testar?
+
+Para testar o funcionamento da aplicação (recomenda-se o uso do Thunder Client ou Postman).
+
+1 - Para utilizar o Thunder Client basta fazer a instalação de uma extensão no (VSCode)
+2 - Assim que instalar, vai aparecer um ícone de um raio ⚡ na sua barra lateral. Clique nele.
+3 - Clique no botão New Request.
+
+Com a tela do Thunder Client aberta, siga estes passos para testar o encurtamento:
+
+Ao lado da barra de endereço, mude a caixinha de GET para POST.
+
+Na barra de endereço, digite: http://127.0.0.1:5000/encurtar
+
+Logo abaixo, clique na aba Body e depois selecione a opção JSON.
+
+Na área de texto que vai aparecer, cole o link a ser encurtado no formato JSON, Ex:
+
+{
+  "url": "https://www.kodland.org/pt/courses/coding/programming-on-python-pro"
+}
+
+Clique no botão azul Send.
+
+Na tela da direita, você verá a sua API respondendo imediatamente com a mensagem de sucesso e o seu link curtinho da seguinte maneira:
+
+{
+  "codigo": "3NZ01",
+  "link_curto": "[http://127.0.0.1:5000/3NZ01](http://127.0.0.1:5000/3NZ01)",
+  "mensagem": "Link encurtado com sucesso!"
+}
+
