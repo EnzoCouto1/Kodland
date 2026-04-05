@@ -59,7 +59,7 @@ A aplicação estará rodando localmente no endereço: http://127.0.0.1:5000
 
 ## Como testar?
 
-1. Para testar o funcionamento da aplicação (recomenda-se o uso do Thunder Client ou Postman).
+# Para testar o funcionamento da aplicação (recomenda-se o uso do Thunder Client ou Postman).
 
 1 - Para utilizar o Thunder Client basta fazer a instalação de uma extensão no (VSCode)
 
@@ -95,7 +95,7 @@ Na tela da direita, você verá a sua API respondendo imediatamente com a mensag
 }
 ```
 
-2. Analytics (Ver status do link)
+# Analytics (Ver status do link)
 Rota: /status/<codigo_gerado>
 
 Método: GET
